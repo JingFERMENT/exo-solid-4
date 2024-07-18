@@ -1,7 +1,11 @@
 <?php
 
+require_once('EventInterface.php');
+
 class PushEvent implements EventInterface
 {
+    private $name;
+    
     public function name() : string
     {
         return 'PushEvent';

@@ -1,7 +1,12 @@
 <?php
 
-class WatchEvent implements EventInterface
+require_once('EventInterface.php');
+require_once('ActionnableInterface.php');
+
+class WatchEvent implements EventInterface, ActionnableInterface
 {
+    private $name;
+
     public function name() : string
     {
         return 'WatchEvent';
